@@ -1,8 +1,8 @@
 require './capybara'
 
-folybara = Capybara.new('Folybara',"Fancy!")
+bender = Capybara.new('Bender',"Fancy!")
 
-puts "You have a capybara named folybara"
+puts "You have a capybara named Bender"
 
 puts "Try out the methods you created for the Capybara class."
 puts "type bender to see what s/he can do"
@@ -15,6 +15,6 @@ while true do
 	elsif input == "bender"
 	  puts bender.inspect
 	else 
-      puts eval(input) #'never use eval' - John 'His Foliness'
+      puts eval(input)
 	end
 end

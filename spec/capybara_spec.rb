@@ -87,4 +87,6 @@ describe Capybara do
 	      expect(joe.friends).to eq ["Colt", "Elie"]
 		end
 	end
+
+	
 end
