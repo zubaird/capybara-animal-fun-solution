@@ -1,8 +1,5 @@
-class Capybara
-	- eat => arg("string") => sends to diet
-	- diet - sends to sick
-	- sick => boolean 
-	- night vision => boolean
-	- greeting => string
-	- breed_name => string
-	- friends => array
+In this assignment you are going to create Capybara breeds.
+
+Play around with the Capybara class you created by typing 'ruby run.rb' in command line.
+
+
