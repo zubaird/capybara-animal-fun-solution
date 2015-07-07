@@ -26,8 +26,6 @@ require_relative '../capybara'
 
 describe Capybara do
 
-	# let(:joe){Capybara.new('coffeebara',"hi")}
-
 	it "lets new capybaras be created with a breed name and greeting" do
 		#create a new instance of a Capybara class here.
 		#it should be consistent with the expect block
