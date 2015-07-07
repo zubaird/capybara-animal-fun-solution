@@ -3,8 +3,8 @@ require 'spec_helper'
 require_relative '../capybara'
 
 # => PRO TIPS
-# RSPEC tests have a 'describe' block and within them, an 'it' block
-# inside the 'it' block, tests typically have three parts (but not always!)
+# RSPEC tests have a 'describe' block and within them there is an 'it' block
+# Inside the 'it' block, tests typically have three parts (but not always!)
 # => 1. Set up the test.
 # => 2. Run the scenario.
 # => 3. Check the expected result.
@@ -28,7 +28,7 @@ describe Capybara do
 
 	# let(:joe){Capybara.new('coffeebara',"hi")}
 
-	it "new capybaras are created with a breed name and greeting" do
+	it "lets new capybaras be created with a breed name and greeting" do
 		#create a new instance of a Capybara class here.
 		#it should be consistent with the expect block
 
@@ -56,7 +56,7 @@ describe Capybara do
 	describe "#night_vision?" do
 	  xit "it returns true when the capybara has night vision" do 
 	  	joe.set_night_vision(true)
-		expect(joe.night_vision?).to eq true
+		expect(joe.night_vision?).to be true
 	  end
 
 	  xit "it returns false when the capybara does not have night vision" do 
@@ -87,4 +87,37 @@ describe Capybara do
 	      expect(joe.friends).to eq ["Colt", "Elie"]
 		end
 	end
+
+	describe "#diet" do
+		xit "takes an array of foods and returns it" do
+		  foods = ["corn", "chocolate", "apple pie", "brownies", "coffee"]
+		  joe.diet = foods
+
+	      expect(joe.diet).to eq foods
+		end
+
+		xit "takes an array of new foods and returns it" do
+		  foods = ["corn", "chocolate", "apple pie", "brownies", "coffee"]
+		  joe.diet = foods
+
+		  new_foods = ["corn", "chocolate", "apple pie", "brownies", "coffee"]
+		  joe.diet = new_foods
+
+	      expect(joe.diet).to eq new_foods
+		end
+	end
+
+	describe "#eat" do
+		xit "takes a food and returns 'yum!'" do
+		  expect(joe.eat("corn")) to eq 'yum!'
+		end
+
+		xit "it does returns 'yuck!' if the food eaten is not in the diet array" do
+          foods = ["corn", "chocolate", "apple pie", "brownies", "coffee"]
+		  joe.diet = foods
+
+	      expect(joe.eat('lettuce')).to eq 'yuck!'
+		end
+	end
+
 end
