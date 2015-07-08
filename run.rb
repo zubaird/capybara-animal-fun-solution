@@ -14,7 +14,7 @@ while true do
       break
 	elsif input == "bender"
 	  puts bender.inspect
-	else 
-      puts eval(input)
+	else
+    puts eval(input)
 	end
 end
